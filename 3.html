@@ -1,0 +1,28 @@
+<script language="javascript">
+
+var unique = function(unique) {
+    var result = [],
+        uniqueLen = unique.length,
+        found, x, y;
+
+    for (x = 0; x < uniqueLen; x++) {
+        found = undefined;
+        for (y = 0; y < result.length; y++) {
+            if (unique[x] === result[y]) {
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            result.push(unique[x]);
+        }
+    }
+    return result;
+}
+
+var arrResult = ['a', 'b', 'c', 'a', 'd', 'e', 'b', 'c', 'f', 'g', 'f'];
+
+var UniqueVal = unique(arrResult);
+
+alert(UniqueVal);
+</script>
